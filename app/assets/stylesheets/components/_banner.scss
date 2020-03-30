@@ -1,0 +1,43 @@
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../assets/banner.jpeg");
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: black;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner .search input {
+  width: 50%;
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+.banner-typed-text:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.banner .search button {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  color: white;
+  i {
+    color: white;
+  }
+}

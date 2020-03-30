@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Atelierlb</title>
+    <title>Atelier LB</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,12 +9,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag 'favicon.ico'%>
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <% if params[:action] != 'home'  %>
+      <%= render 'shared/navbar'%>
+    <% end %>
+    <%= render 'shared/modal' %>
+    <div class="content-wrapper"><%= yield %></div>
     <%= render 'shared/flashes' %>
-
-    <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>

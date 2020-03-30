@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
+.btn-flat {
+  color: white;
+  padding: 7px 24px;
+  border-radius: 4px;
+  background: $blue;
+  transition: background 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.btn-flat:hover {
+  background: $dark-blue;
+  color: white;
+  border-color: white;
+}
+
+.btn-add-sesh {
+  font-weight: 600;
+  font-size: 24px;
+  margin-right: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all .1s ease-out;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+  background: none;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.btn-contact{
+  font-weight: 600;
+  font-size: 24px;
+  border-radius: 4px;
+  margin-right: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all .1s ease-out;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+  background: $red;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
