@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
-
+#to send email on development (don’t really send emails)
+gem 'letter_opener', group: :development
 # to bring pics from Cloudinary
 gem 'cloudinary', '~> 1.12.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
