@@ -1,3 +1,13 @@
-Contact#general_message
+You got a new contact from <%= @contact.name %>!
+===============================================
 
-<%= @greeting %>, find me in app/views/contact_mailer/general_message.text.erb
+Contact Details:
+--------------------------
+
+Name: <%= @contact.name %>
+Email: <%= @contact.email %>
+Address: <%= @contact.address %>
+Phone: <%= @contact.phone %>
+
+Message:
+<%= @contact.message %>

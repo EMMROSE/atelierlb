@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def new
     @contact = Contact.new
   end
@@ -7,11 +9,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      mail = ContactMailer.general_message.deliver
-      flash.notice = "Merci! votre message a été transmis."
+      mail = ContactMailer.general_message(@contact).deliver
       redirect_to root_path
     else
-      #flash.now[:error] = t('flash.contact.error_html')
       render :new
     end
   end

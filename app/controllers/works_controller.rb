@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  #skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     if params[:query].present?
       @works = Work.search_by_title_category(params[:query])

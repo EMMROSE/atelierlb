@@ -1,5 +1,7 @@
-<h1>Contact#general_message</h1>
+<h1>Nouvel email depuis Atelier LB</h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/contact_mailer/general_message.html.erb
-</p>
+<p><b>From: </b><%= @contact.name %></p>
+<p><b>Email: </b> <%= @contact.email %></p>
+<p><b>Address: </b> <%= @contact.address %></p>
+<p><b>Phone: </b> <%= @contact.phone %></p><br>
+<p><b>Message: </b> <%= @contact.message %></p>

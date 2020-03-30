@@ -9,8 +9,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
-  <div class="search d-none">
+  <div id="js-navbar-search" class="search d-none">
     <%= form_tag works_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
       <div class="search-form-control form-group mb-0">
         <%= text_field_tag :query,

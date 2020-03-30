@@ -10,7 +10,7 @@
      </div>
      <div class="modal-body">
        <div class="container form-container">
-         <% new_contact = Order.new %>
+         <% new_contact = Contact.new %>
          <%= simple_form_for(new_contact) do |f| %>
            <div class="form-top">
              <%= f.input :name, label: 'Nom', placeholder: "Arthur Martin" %>

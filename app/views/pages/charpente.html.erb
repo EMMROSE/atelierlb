@@ -1,0 +1,19 @@
+<!-- DISPLAY CHARPENTE WORKS -->
+
+<div>
+  <h2>Nos réalisations en Charpente</h2>
+  <div class="cards" style="margin-top: 80px;">
+    <% if @works %>
+      <% @works.each do |work| %>
+        <%= link_to work_path(work) do %>
+          <div class="card-category">
+            <%= cl_image_tag work.cover.key, class: "cover"%>
+            <div>
+              <h3><%= work.title %></h3>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
