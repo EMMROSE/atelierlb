@@ -1,0 +1,36 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+   <div class="modal-content form-content">
+     <div class="modal-header form-content">
+       <h5 class="modal-title" id="exampleModalLabel">Quel est votre projet ?</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+       <div class="container form-container">
+         <% new_contact = Order.new %>
+         <%= simple_form_for(new_contact) do |f| %>
+           <div class="form-top">
+             <%= f.input :name, label: 'Nom', placeholder: "Arthur Martin" %>
+             <%= f.input :address, label: 'Adresse', placeholder: "9 place de la fontaine, Cherbourg-Octeville" %>
+             <%= f.input :email, label: 'votre adresse e-mail', placeholder: "prenom.nom@mail.fr" %>
+             <%= f.input :phone, label: 'votre numéro de téléphone', placeholder: "0102030405" %>
+             <%= f.input :message, label: 'Décrivez votre projet', as: :text, placeholder: "Une véranda, une charpente, un meuble sur mesure... nous sommes à l'écoute de votre projet." %>
+
+             <!-- <label class="select optional" for="sport_session_location">Where are you heading?</label>
+             <input type="text" name="sport_session[location]" id="sport_session[location]" value="" style="text-align: left; position: relative; vertical-align: top; width: 100%" class="search_query" placeholder="Anywhere">
+
+             TO DO: BUTTON FOR SELECT CATEGORY AS ACTIVITY CHOICE IN GOM PROJECT
+-->
+           </div>
+           <div>
+            <%= f.submit "Soumettre", class: 'btn btn-contact' %>
+           </div>
+         <% end %>
+       </div>
+     </div>
+   </div>
+  </div>
+</div>

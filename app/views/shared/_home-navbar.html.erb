@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
-  <div class="navbar-brand flex-grow-1">
+<div id="js-scroll-navbar" class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top bg-transparent">
+  <div id="js-navbar-brand" class="navbar-brand flex-grow-1">
     <%= link_to root_path do %>
       <%= image_tag "logolb.png" %>
     <% end %>
@@ -10,7 +10,7 @@
   </button>
 
 
-  <div class="search d-none">
+  <div id="js-navbar-search" class="search d-none">
     <%= form_tag works_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
       <div class="search-form-control form-group mb-0">
         <%= text_field_tag :query,
@@ -27,13 +27,12 @@
     <% end %>
   </div>
   <div>
-    <ul class="navbar-nav pr-10">
+    <ul class="navbar-nav mr-auto">
+      <a href="<%=about_path%>" class="btn-add-sesh">Recrutement</a>
       <a href="<%=about_path%>" class="btn-add-sesh">Atelier</a>
       <button type="button" class="btn-contact" data-toggle="modal" data-target="#exampleModal">
         Nous Contacter
       </button>
     </ul>
   </div>
-</div>
-<div class="margin-navbar">
 </div>
