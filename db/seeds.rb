@@ -25,10 +25,14 @@ puts 'Create Works'
 @work1 = Work.new(title: 'Verrière pour cuisine', category:'verrière')
 file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/verriere.jpg')
 @work1.cover.attach(io: file, filename: 'verriere.jpg', content_type: 'image/jpg')
+preview_files = []
 preview_file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/charpente.jpg')
 preview_file2 = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/vitrine.jpg')
-@work1.previews.attach(io: preview_file, filename: 'verriereun.jpg', content_type: 'image/jpg')
-@work1.previews.attach(io: preview_file2, filename: 'verrieredeux.jpg', content_type: 'image/jpg')
+preview_hash = {io: preview_file, filename: 'verriereun.jpg', content_type: 'image/jpg'}
+preview_files << preview_hash
+preview_hash = {io: preview_file2, filename: 'verrieredeux.jpg', content_type: 'image/jpg'}
+preview_files << preview_hash
+@work1.previews.attach(preview_files)
 @work1.save!
 puts 'Works#1 created'
 

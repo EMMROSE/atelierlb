@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
         <div id="preview-miniature">
-            <% @work.preview.each_with_index do |preview, i| %>
+            <% @work.previews.each_with_index do |preview, i| %>
               <div data-toggle="modal" data-target="#exampleModal" data-slide-to="<%= i %>" class="preview-mini">
                 <%= cl_image_tag preview.key, class: "w-100"%>
               </div>
