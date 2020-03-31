@@ -26,13 +26,14 @@ import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
 import { scrolledNav } from '../components/navbar';
 import { formSportSessions } from '../components/form';
+import { stopCarousel } from '../components/carousel';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
   //initFlatPickr();
   scrolledNav(); // scroll effect of the navbar on Home Page
-  //stopCarousel(); // stop boostrap carousel (for preview) to autoplay
+  stopCarousel(); // stop boostrap carousel (for preview) to autoplay
   //initMapbox();
   formSportSessions(); // change activity class when clicked on (on sport session form creation)
   loadDynamicBannerText();

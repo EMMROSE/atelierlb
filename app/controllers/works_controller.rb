@@ -30,6 +30,6 @@ class WorksController < ApplicationController
   private
 
   def work_params
-    params.require(:book).permit(:title, :category, :description, previews: [])
+    params.require(:work).permit(:title, :category, :description, :cover, previews: [])
   end
 end

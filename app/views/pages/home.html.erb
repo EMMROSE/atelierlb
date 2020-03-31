@@ -2,6 +2,7 @@
   <%= render 'shared/banner' %>
   <br>
   <div class="cards">
+    <%= link_to charpente_path do %>
     <div class="flip">
         <div class="front" style="background-image: url(../assets/charpente.jpeg)">
            <h1 class="text-shadow">CHARPENTE</hi>
@@ -11,6 +12,8 @@
            <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
         </div>
     </div>
+    <% end %>
+    <%= link_to agencement_path do %>
     <div class="flip">
         <div class="front" style="background-image: url(../assets/agencement.jpeg)">
            <h1 class="text-shadow">AGENCEMENT</hi>
@@ -20,24 +23,30 @@
            <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
         </div>
     </div>
-    <div class="flip">
-        <div class="front" style="background-image: url(../assets/verriere.jpg)">
-           <h1 class="text-shadow">VERRIERE</hi>
-        </div>
-        <div class="back">
-           <h2>Verrière</h2>
-           <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
-        </div>
-    </div>
-    <div class="flip">
-        <div class="front" style="background-image: url(../assets/meuble.jpg)">
-           <h1 class="text-shadow">SUR MESURE</hi>
-        </div>
-        <div class="back">
-           <h2>Meuble sur mesure</h2>
-           <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
-        </div>
-    </div>
+    <% end %>
+    <%= link_to verriere_path do %>
+      <div class="flip">
+          <div class="front" style="background-image: url(../assets/verriere.jpg)">
+             <h1 class="text-shadow">VERRIERE</hi>
+          </div>
+          <div class="back">
+             <h2>Verrière</h2>
+             <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+          </div>
+      </div>
+    <% end %>
+    <%= link_to surmesure_path do %>
+      <div class="flip">
+          <div class="front" style="background-image: url(../assets/meuble.jpg)">
+             <h1 class="text-shadow">SUR MESURE</hi>
+          </div>
+          <div class="back">
+             <h2>Meuble sur mesure</h2>
+             <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+          </div>
+      </div>
+    <% end %>
+    <%= link_to vitrine_path do %>
       <div class="flip">
         <div class="front" style="background-image: url(../assets/vitrine.jpg)">
            <h1 class="text-shadow">VITRINE</hi>
@@ -46,7 +55,9 @@
            <h2>Vitrine de magasin</h2>
            <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
         </div>
-    </div>
+      </div>
+    <% end %>
+    <%= link_to about_path do %>
       <div class="flip">
         <div class="front" style="background-image: url(../assets/atelier.jpeg)">
            <h1 class="text-shadow">NOTRE ATELIER</h1>
@@ -55,5 +66,6 @@
            <h2>Notre Atelier</h2>
            <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
         </div>
-    </div>
+      </div>
+    <% end %>
   </div>

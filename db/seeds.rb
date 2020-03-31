@@ -25,7 +25,12 @@ puts 'Create Works'
 @work1 = Work.new(title: 'Verrière pour cuisine', category:'verrière')
 file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/verriere.jpg')
 @work1.cover.attach(io: file, filename: 'verriere.jpg', content_type: 'image/jpg')
+preview_file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/charpente.jpg')
+preview_file2 = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/vitrine.jpg')
+@work1.previews.attach(io: preview_file, filename: 'verriereun.jpg', content_type: 'image/jpg')
+@work1.previews.attach(io: preview_file2, filename: 'verrieredeux.jpg', content_type: 'image/jpg')
 @work1.save!
+puts 'Works#1 created'
 
 @work2 = Work.new(title: 'Charpente de ferme', category:'charpente')
 file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/charpente.jpg')
@@ -41,6 +46,17 @@ file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/a
 file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/vitrine.jpg')
 @work4.cover.attach(io: file, filename: 'vitrine.jpg', content_type: 'image/jpg')
 @work4.save!
+
+@work5 = Work.new(title: 'Verrière pour chambre', category:'verrière')
+file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/verriere.jpg')
+@work5.cover.attach(io: file, filename: 'verriere.jpg', content_type: 'image/jpg')
+@work5.save!
+
+@work6 = Work.new(title: 'Charpente pour atelier', category:'charpente')
+file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/charpente.jpg')
+@work6.cover.attach(io: file, filename: 'charpente.jpg', content_type: 'image/jpg')
+@work6.save!
+
 puts '>>>>>> Done!'
 puts "#{Work.count} Works created!"
 puts '----------------'

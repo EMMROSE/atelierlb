@@ -12,14 +12,18 @@ class PagesController < ApplicationController
   end
 
   def agencement
+    @works = Work.where(category: 'agencement')
   end
 
   def verriere
+    @works = Work.where(category: 'verrière')
   end
 
   def surmesure
+    @works = Work.where(category: 'sur-mesure')
   end
 
   def vitrine
+    @works = Work.where(category: 'vitrine')
   end
 end

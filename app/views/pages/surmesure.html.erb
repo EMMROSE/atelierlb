@@ -1,8 +1,8 @@
 <div>
+  <h2>Nos réalisations sur-mesure</h2>
   <div class="cards" style="margin-top: 80px;">
     <% if @works %>
       <% @works.each do |work| %>
-        <%= link_to work_path(work), "data-toggle" => "work-modal", 'data-target' => '#exampleModal' %>
         <%= link_to work_path(work) do %>
           <div class="card-category">
             <%= cl_image_tag work.cover.key, class: "cover"%>
