@@ -5,11 +5,13 @@
 @import "button";
 @import "card";
 @import "card-category";
+@import "card-work";
 @import "footer";
 @import "form";
+@import "margin-navbar";
 @import "navbar";
 @import "preview";
 
 .content-wrapper {
-  min-height: calc(110vh - 70px - 80px);
+  min-height: calc(100vh - 70px - 80px);
 }

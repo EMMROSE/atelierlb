@@ -5,6 +5,7 @@
 .form-content {
   background-color:rgba(72,72,72,0.6);
   font: Helvetica;
+  color: white;
 }
 
 .form-container {
@@ -17,6 +18,9 @@
   padding: 1rem 30px 1rem 30px;
 }
 
+.form-container .form-button {
+  margin: 50px 390px;
+}
 
 .signin-form-content {
   margin: 50px 400px;

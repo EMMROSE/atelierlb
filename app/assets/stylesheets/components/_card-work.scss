@@ -1,0 +1,60 @@
+.card-work {
+  margin-top: 50px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+.card-work-left {
+  img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+}
+.card-work-left-cover {
+
+}
+.card-work-right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .card-work-right > button {
+    position: absolute;
+    left: 520px;
+    top: 126px;
+  }
+}
+.card-work-infos {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    font-size: 24px;
+    opacity: .7;
+    margin: 0;
+  }
+}
+
+
+
+
+
+// .card-book-right {
+//   display: flex;
+//   flex-direction: column;
+//   .card-book-bookings {
+//     position: relative;
+//     margin-top: 10px;
+//   }
+//   #booking_btn {
+//     position: absolute;
+//     left: 520px;
+//     top: 126px;
+//   }
+
