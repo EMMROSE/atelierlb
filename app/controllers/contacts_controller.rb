@@ -7,12 +7,10 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-
     if @contact.save
       mail = ContactMailer.general_message(@contact).deliver
       redirect_to root_path
-    else
-      render :new
+    else render :new
     end
   end
 

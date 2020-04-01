@@ -38,6 +38,7 @@ preview_files << preview_hash
 puts 'Works#1 created'
 
 @work2 = Work.new(title: 'Charpente de ferme', category:'charpente')
+@work2.description = "Réalisarion d'une charpente en chêne de 30 mètres pour abriter un corps de ferme."
 file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/charpente.jpg')
 @work2.cover.attach(io: file, filename: 'charpente.jpg', content_type: 'image/jpg')
 preview_files = []
@@ -51,8 +52,16 @@ preview_files << preview_hash
 @work2.save!
 
 @work3 = Work.new(title: 'Vitrine de restaurant', category:'vitrine')
+@work3.description = "Pose d'une vitrine pour un restaurant en double vitrage et ossature aluminium et aspect blanc."
 file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/vitrine.jpg')
 @work3.cover.attach(io: file, filename: 'vitrine.jpg', content_type: 'image/jpg')
+preview_files = []
+preview_file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/vitrine.jpg')
+preview_file2 = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/vitrine.jpg')
+preview_hash = {io: preview_file, filename: 'vitrine.jpg', content_type: 'image/jpg'}
+preview_files << preview_hash
+preview_hash = {io: preview_file2, filename: 'vitrine.jpg', content_type: 'image/jpg'}
+preview_files << preview_hash
 @work3.save!
 
 @work4 = Work.new(title: 'Véranda de jardin', category:'véranda')
