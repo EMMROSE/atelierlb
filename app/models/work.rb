@@ -1,9 +1,10 @@
 class Work < ApplicationRecord
+  CATEGORIES = ['charpente', 'vitrine', 'verrière', 'sur-mesure', 'agencement']
   has_one_attached :cover
   has_many_attached :previews
 
   validates :title, presence: true
-  validates :category, presence: true
+  validates :category, presence: true, inclusion: { in: CATEGORIES }
 
   #pg search
   include PgSearch::Model

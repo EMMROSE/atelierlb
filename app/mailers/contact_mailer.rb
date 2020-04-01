@@ -7,6 +7,6 @@ class ContactMailer < ApplicationMailer
   #
   def general_message(contact)
     @contact = contact
-    mail to: "roseemmanuel@hotmail.com", subject: "New Message from Atelier LB"
+    mail to: "emrose351@gmail.com", subject: "New Message from Atelier LB"
   end
 end

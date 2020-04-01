@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def new
-    @contact = Contact.new
+    @contact = Contact.new()
   end
 
   def create
@@ -10,7 +10,10 @@ class ContactsController < ApplicationController
     if @contact.save
       mail = ContactMailer.general_message(@contact).deliver
       redirect_to root_path
-    else render :new
+      flash[:notice] = "Votre demande a bien été transmise"
+    else
+      render :new
+      flash[:alert] = "Veuillez compléter le formulaire s'il vous plaît."
     end
   end
 

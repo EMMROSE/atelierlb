@@ -1,0 +1,17 @@
+<div class="container form-container">
+ <% new_work = Work.new %>
+ <%= simple_form_for(new_work) do |f| %>
+   <div class="form-top">
+    <%= f.input :title, label: 'Titre', placeholder: "Quel titre souhaites-tu donner à ta réalisation" %>
+    <%= f.input :category, as: :radio_buttons, collection: ['charpente', 'vitrine', 'verrière', 'sur-mesure', 'agencement'], wrapper: :vertical_collection_inline %>
+    <%= f.input :description, label: 'Ajoutez une description', as: :text, placeholder: "Chef d'oeuvre réalisé par les ateliers LB avec un alliage d'aluminium et de zinc sur son lit d'acajou.." %>
+    <div class="d-flex">
+      <%= f.input :cover, label: 'Ajoutez une photo de couverture', as: :file %>
+      <%= f.input :previews, label: 'Ajoutez des photos pour illustrer en détail', as: :file, input_html: { multiple: true }%>
+    </div>
+   </div>
+   <div class="form-button">
+    <%= f.submit "Ajouter", class: 'btn btn-contact' %>
+   </div>
+ <% end %>
+</div>

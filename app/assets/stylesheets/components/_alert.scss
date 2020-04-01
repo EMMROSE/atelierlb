@@ -3,4 +3,15 @@
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  background-color: rgba(255, 183, 0, 0.4);
+  color: white;
+}
+
+.notice {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  background-color: rgba(0, 135, 0, 0.4);
+  color: white;
 }

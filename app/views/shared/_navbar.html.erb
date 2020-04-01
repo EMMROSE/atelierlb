@@ -26,12 +26,23 @@
     <% end %>
   </div>
   <div>
-    <ul class="navbar-nav pr-10">
-      <a href="<%=about_path%>" class="btn-add-sesh">Atelier</a>
-      <button type="button" class="btn-contact" data-toggle="modal" data-target="#exampleModal">
-        Nous Contacter
-      </button>
-    </ul>
+    <% if user_signed_in? %>
+      <ul class="navbar-nav pr-10">
+        <a href="<%=new_work_path%>" class="btn-add-sesh">Nouveau</a>
+        <a href="<%=about_path%>" class="btn-add-sesh">Atelier</a>
+        <button type="button" class="btn-contact" data-toggle="modal" data-target="#exampleModal">
+          Nous Contacter
+        </button>
+        <a class="btn-add-sesh"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a>
+      </ul>
+    <% else %>
+      <ul class="navbar-nav pr-10">
+        <a href="<%=about_path%>" class="btn-add-sesh">Atelier</a>
+        <button type="button" class="btn-contact" data-toggle="modal" data-target="#exampleModal">
+          Nous Contacter
+        </button>
+      </ul>
+    <% end %>
   </div>
 </div>
 <div class="margin-navbar">
