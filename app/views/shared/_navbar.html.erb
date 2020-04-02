@@ -6,9 +6,9 @@
       <% end %>
     </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
     <div class="search mt-2">
       <%= form_tag works_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
@@ -27,7 +27,7 @@
       <% end %>
     </div>
   </div>
-  <div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <% if user_signed_in? %>
       <ul class="navbar-nav pr-10">
         <a href="<%=new_work_path%>" class="btn-add-sesh">Nouveau</a>
