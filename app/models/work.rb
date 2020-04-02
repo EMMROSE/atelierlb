@@ -1,5 +1,5 @@
 class Work < ApplicationRecord
-  CATEGORIES = ['charpente', 'vitrine', 'verrière', 'sur-mesure', 'agencement']
+  CATEGORIES = ['charpente', 'fenêtre', 'véranda', 'verrière', 'sur-mesure', 'agencement']
   has_one_attached :cover
   has_many_attached :previews
 

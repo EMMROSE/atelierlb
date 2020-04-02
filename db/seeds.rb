@@ -51,7 +51,7 @@ preview_files << preview_hash
 @work2.previews.attach(preview_files)
 @work2.save!
 
-@work3 = Work.new(title: 'Vitrine de restaurant', category:'vitrine')
+@work3 = Work.new(title: 'Vitrine de restaurant', category:'agencement')
 @work3.description = "Pose d'une vitrine pour un restaurant en double vitrage et ossature aluminium et aspect blanc."
 file = URI.open('https://res.cloudinary.com/dwrzyhvzy/image/upload/v1585089570/atelier/vitrine.jpg')
 @work3.cover.attach(io: file, filename: 'vitrine.jpg', content_type: 'image/jpg')

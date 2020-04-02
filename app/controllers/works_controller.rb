@@ -5,6 +5,9 @@ class WorksController < ApplicationController
       @works = Work.search_by_title_category(params[:query])
     else @works = Work.all
     end
+    if @works.count == 0
+        @works = Work.all
+    end
   end
 
   def show

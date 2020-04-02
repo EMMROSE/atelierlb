@@ -23,7 +23,11 @@ class PagesController < ApplicationController
     @works = Work.where(category: 'sur-mesure')
   end
 
-  def vitrine
-    @works = Work.where(category: 'vitrine')
+  def veranda
+    @works = Work.where(category: 'véranda')
+  end
+
+  def fenetre
+    @works = Work.where(category: 'fenêtre')
   end
 end
