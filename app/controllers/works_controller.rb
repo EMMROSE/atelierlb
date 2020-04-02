@@ -30,6 +30,25 @@ class WorksController < ApplicationController
     end
   end
 
+  def edit
+    @work = Work.find(params[:id])
+  end
+
+  def update
+    @work = Work.find(params[:id])
+    if @work.update(work_params)
+      redirect_to work_path(@work)
+    else render :edit
+    end
+  end
+
+  def destroy
+    @work = Work.find(params[:id])
+    @work.destroy
+    # no need for app/views/books/destroy.html.erb
+    redirect_to works_path
+  end
+
   private
 
   def work_params

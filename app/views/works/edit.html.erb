@@ -1,0 +1,14 @@
+<div class="container">
+  <h4>Editez le projet:  "<%= @work.title %>"</h4><br>
+  <%=  simple_form_for(@work) do |f| %>
+    <%= f.input :title, label: 'Titre' %>
+    <%= f.input :category, as: :radio_buttons, collection: ['charpente', 'fenêtre', 'véranda', 'verrière', 'sur-mesure', 'agencement'], wrapper: :vertical_collection_inline %>
+    <%= f.input :description, label: 'Ajoutez une description', as: :text %>
+    <%= f.input :cover, label: 'Ajoutez une photo de couverture', as: :file %>
+    <%= f.input :previews, label: 'Ajoutez photo n°1', as: :file, input_html: { multiple: true }%>
+    <%= f.input :previews, label: 'Ajoutez photo n°2', as: :file, input_html: { multiple: true }%>
+    <div class="form-button">
+    <%= f.submit "Editer", class: 'btn btn-contact' %>
+    </div>
+  <% end %>
+</div>

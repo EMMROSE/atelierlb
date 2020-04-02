@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'verriere', to: 'pages#verriere'
   get 'veranda', to: 'pages#veranda'
   get 'fenetre', to: 'pages#fenetre'
-  resources :works, only: [:index, :show, :new, :create]
-  resources :contacts
+  resources :works
+  resources :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

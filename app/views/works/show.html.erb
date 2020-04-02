@@ -37,6 +37,17 @@
           <button type="button" class="btn-contact mt-5" data-toggle="modal" data-target="#exampleModal">
             Nous Contacter
           </button>
+          <% if user_signed_in? %>
+          <br>
+          <ul>
+            <%= link_to edit_work_path(@work), class: "py-2 px-4 ml-2 bd-highlight bg-light rounded" do %>
+              <i class="fas fa-pencil-alt"></i> Edit
+            <% end %>
+            <%= link_to work_path(@work), method: :delete, class: "py-2 px-4 ml-2 bd-highlight bg-light rounded",data: { confirm: "Etes vous sûre ?" } do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          </ul>
+          <% end %>
         </div>
       </div>
     </div>

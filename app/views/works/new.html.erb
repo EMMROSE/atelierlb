@@ -7,7 +7,8 @@
     <%= f.input :description, label: 'Ajoutez une description', as: :text, placeholder: "Chef d'oeuvre réalisé par les ateliers LB avec un alliage d'aluminium et de zinc sur son lit d'acajou.." %>
     <div class="d-flex">
       <%= f.input :cover, label: 'Ajoutez une photo de couverture', as: :file %>
-      <%= f.input :previews, label: 'Ajoutez des photos pour illustrer en détail', as: :file, input_html: { multiple: true }%>
+      <%= f.input :previews, label: 'Ajoutez photo n°1', as: :file, input_html: { multiple: true }%>
+      <%= f.input :previews, label: 'Ajoutez photo n°2', as: :file, input_html: { multiple: true }%>
     </div>
    </div>
    <div class="form-button">

@@ -35,3 +35,10 @@
     font-weight: normal;
   }
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 650px) {
+  .footer-address{
+    display: none;
+  }
+}
