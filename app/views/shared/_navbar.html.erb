@@ -9,14 +9,14 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div id="js-navbar-search" class="search d-none">
+  <div class="search d-none">
     <%= form_tag works_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
       <div class="search-form-control form-group mb-0">
         <%= text_field_tag :query,
             params[:query],
             class: "search-input form-control string required",
             id: "search_query",
-            placeholder: "Rechercher parmi nos réalisations",
+            placeholder: "Nos réalisations",
             value: ""
         %>
         <%= button_tag(type: "submit", class: "btn btn-flat") do %>
