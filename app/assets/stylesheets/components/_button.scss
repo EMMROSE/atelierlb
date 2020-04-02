@@ -58,3 +58,15 @@
     text-decoration: none;
   }
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .btn-contact{
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .btn-add-sesh {
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
