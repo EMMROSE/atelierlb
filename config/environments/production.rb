@@ -1,5 +1,7 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "https://atelier-lb.herokuapp.com" }
+  # or your custom domain name eg. "www.yourdomain.com"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -24,9 +26,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "atelier-lb.herokuapp.com" }
-  # or your custom domain name eg. "www.yourdomain.com"
+
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
