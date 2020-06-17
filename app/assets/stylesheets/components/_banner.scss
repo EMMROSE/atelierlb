@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 200px 0;
-  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url("../assets/banner.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url("../assets/banner-bis.jpg");
 }
 
 .banner h3 {
@@ -38,6 +38,13 @@
   padding-bottom: 19px;
   color: white;
   i {
-    color: white;
+    color: white
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner .search input {
+    width: 80%;
   }
 }

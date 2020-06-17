@@ -48,9 +48,26 @@
 }
 
 // Smallest device
-// @media (min-width: 100px) and (max-width: 575px) {
-//   .search-input {
-//   width: 30%;
-//   display: inline-block;
-//   }
-// }
+@media (min-width: 100px) and (max-width: 575px) {
+  .navbar .search-input {
+      width: 80%;
+      display: inline-block;
+  }
+  .fa-search {
+    margin-left: 2px;
+  }
+}
+
+// Medium device
+@media (min-width: 665px) and (max-width: 812px) {
+  .navbar-nav {
+    width: 280px;
+  }
+}
+
+// Medium large
+@media (min-width: 813px) {
+  .navbar-nav {
+    width: 330px;
+  }
+}

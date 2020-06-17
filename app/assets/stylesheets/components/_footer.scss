@@ -38,7 +38,25 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 650px) {
+  .footer {
+    height: 110px;
+    padding: 0px 8px;
+    color: rgba(0,0,0,0.3);
+    img {
+      width: 50px;
+    }
+  }
+  .footer-links a {
+    opacity: 1.0;
+  }
   .footer-address{
     display: none;
+  }
+}
+
+// Smallest device
+@media (min-width: 665px) and (max-width: 812px) {
+  .footer {
+    padding: 0px 8px;
   }
 }

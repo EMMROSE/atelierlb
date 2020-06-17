@@ -18,3 +18,39 @@
 .body-bgcolor {
   background-color: $white;
 }
+
+#illustration-workshop {
+  img{
+    width: 80%;
+    height: auto;
+    border-radius: 6%;
+  }
+}
+
+.about-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .about-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  #illustration-workshop {
+    display: flex;
+    justify-content: center;
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 6%;
+      margin-bottom: 8px;
+    }
+  }
+}

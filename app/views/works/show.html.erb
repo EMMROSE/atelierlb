@@ -34,7 +34,7 @@
             <br>
             <p><%= @work.description %></p>
           </div>
-          <button type="button" class="btn-contact mt-5" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn-contact mt-5" id="btn-modal" data-toggle="modal" data-target="#exampleModal">
             Nous Contacter
           </button>
           <% if user_signed_in? %>
